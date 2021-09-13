@@ -25,16 +25,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void StartGame(){
-		UiManager.instance.GameStart ();
 		EasyUiManager.instance.GameStart ();
-		//UiManager.instance.textDownAnimation ();
 		ScoreManager.instance.StartScore ();
-		GameObject.Find ("EasyPlatformspawner").GetComponent<EasyPlatformspawner> ().StartSpawningPlatform ();
-		GameObject.Find ("PlateformSpawner").GetComponent<PlateformSpawner> ().StartSpawningPlatform ();
-	}
+        EasyPlatformspawner.instance.StartSpawningPlatform();
+    }
 
 	public void GameOver(){
-		UiManager.instance.Gameover ();
 		EasyUiManager.instance.Gameover (); 
 		ScoreManager.instance.StopScore ();
 		gameOver = true;

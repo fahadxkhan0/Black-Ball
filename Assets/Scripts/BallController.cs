@@ -9,7 +9,7 @@ public class BallController : MonoBehaviour {
 	     bool started; 
 	     Rigidbody rb;
 	     bool gameOver;
-		 //public float rotation;
+		 
 		 
 
 	void Awake(){
@@ -44,7 +44,7 @@ public class BallController : MonoBehaviour {
 
 			Camera.main.GetComponent<CameraFollow>().gameOver = true;
 
-			GameManager.instance.GameOver ();
+			GameManager.instance.GameOver();
 
 		}
         

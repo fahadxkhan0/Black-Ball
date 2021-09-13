@@ -1,14 +1,19 @@
 using UnityEngine;
 using System.Collections;
 
-public class EasyPlatformspawner : MonoBehaviour {
-	Vector3 lastPos;
+public class EasyPlatformspawner : MonoBehaviour 
+{
+    public static EasyPlatformspawner instance;
+    Vector3 lastPos;
 	
 	float size;
 	public GameObject plateform;
 	public bool gameOver;
 	public GameObject diamonds;
 
+	private void Awake() {
+        instance = this;
+    }
 	// Use this for initialization
 	void Start () {
 		lastPos = plateform.transform.position;

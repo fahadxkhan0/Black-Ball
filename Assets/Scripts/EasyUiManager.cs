@@ -28,14 +28,8 @@ public class EasyUiManager : MonoBehaviour {
 	}
 	public void GameStart(){
 		tapText.GetComponent<Animator> ().Play ("textDown");
-		//tapText.SetActive (false);
 		zigzagPanel.GetComponent<Animator> ().Play ("panelUp");
 	}
-
-	//public void textDownAnimation(){
-		
-		//tapText.GetComponent<Animator> ().Play ("textDown");
-	//}
 
 	public void Gameover(){
 		score.text = PlayerPrefs.GetInt ("score").ToString();
